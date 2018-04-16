@@ -1,0 +1,35 @@
+Testing for None
+    When testing against singleton values like "None" use the "is" operator.
+    This will prevent false matches for other non-True evaluations.
+        None is None
+        None == False
+        None is not False
+        [] == False
+        [] is not None
+
+
+Multiple tests against a single variable
+    Test a variable against a set instead of multiple individual values.
+        if x in {value1, value2, value3...}
+    This only applies to "or" statements.
+
+
+Random items:
+    Don't use "randint" to generate a list index.
+    Instead use "random.choice(set)"
+
+
+Formatting strings with dictionaries:
+    Use the **dict format to unpack the values and map to the keys.
+        e.g.
+        users = {'name': 'John', 'age': 23}
+        print("My name is {name}, and I'm {age} years old.".format(**users))
+
+
+Use exit codes to notify user of completion status.
+
+
+Flat is better than nested.
+    Use guarding clauses where possible and return (or continue in a loop) early.
+
+
